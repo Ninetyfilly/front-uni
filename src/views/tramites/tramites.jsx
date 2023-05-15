@@ -11,7 +11,7 @@ function Tramites() {
         <nav>
         <ul>
             <li>
-            <Link to="/menu/tramites">Tramites</Link>
+            <Link to="/tramites/formulario">formulario</Link>
             </li>
             <li>
             <Link to="/menu">Menú</Link>

@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import axios from "axios";
 import { useNavigate } from 'react-router-dom';
-
+import { ToastContainer,toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 function Login() {
@@ -19,15 +20,22 @@ function Login() {
   async function handleSubmit (event) {
     event.preventDefault();
     const data = {
-      email: username,
+      username,
       password
     }
     try {
-      // const response = await axios.post(`http://localhost:8000/login`,{
-      //   body: data
-      // })
-      console.log('response')
-      navigate('/menu')
+      const response = await axios.post(`http://localhost:8000/login`,{
+        ...data
+      })
+      if(response.data.status == 'ok')navigate('/menu')
+      else {
+        console.log('response.data.status',response.data.status)
+        toast("Usuario o contraseña equivocados.", {
+          autoClose: 2000,
+          position:"top-center",
+          theme: "dark"
+        });
+      }
     } catch (error) {
       console.log('Error: ',error)
     }
@@ -53,6 +61,7 @@ function Login() {
           onChange={handlePasswordChange}
         />
       </div>
+      <ToastContainer/>
       <button type="submit">Iniciar sesión</button>
     </form>
   );
