@@ -4,7 +4,10 @@ import Estadisticas from './views/estadisticas/estadisticas'
 import Titulos from './views/titulos/titulos'
 import Tramites from './views/tramites/tramites'
 import FormularioT from './views/tramites/formulario'
-import TablaF from './views/tramites/tabla'
+import TablaT from './views/tramites/tabla'
+import FormularioTitu from './views/titulos/formulario'
+import TablaTitu from './views/titulos/tabla'
+
 
 
 
@@ -40,17 +43,25 @@ function App() {
       element: <FormularioT />,
     },
     {
-      path: "/formulario/tablas",
-      element: <TablaF />,
+      path: "/tramites/formulario/tablas",
+      element: <TablaT />,
+    },
+    {
+      path: "/titulos/formulario",
+      element: <FormularioTitu />,
+    },
+    {
+      path: "/titulos/formulario/tablas",
+      element: <TablaTitu />,
     },
     
   ]);
 
   return (
-    <>
+    <div>
       {/* <Login/> */}
       <RouterProvider router={router} />
-    </>
+    </div>
   )
 }
 

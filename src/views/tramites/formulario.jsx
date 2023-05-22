@@ -139,7 +139,7 @@ const Formulario = () => {
             <Link to="/menu">Menú</Link>
             </li>
             <li>
-            <Link to="/formulario/tablas">Ver tablas</Link>
+            <Link to="/tramites/formulario/tablas">Ver tablas</Link>
             </li>
         </ul>
         </nav>

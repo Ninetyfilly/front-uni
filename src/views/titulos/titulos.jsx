@@ -11,7 +11,7 @@ function Titulos() {
     <nav>
       <ul>
         <li>
-          <Link to="/menu/titulos">Titulos</Link>
+          <Link to="/titulos/formulario">Formulario</Link>
         </li>
         <li>
             <Link to="/menu">Menú</Link>
