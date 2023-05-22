@@ -1,4 +1,4 @@
-div {
+.form div {
     display: flex;
     flex-direction: row;
     align-items: flex-start;
@@ -8,6 +8,10 @@ div {
   
 label {
     margin-right: 10px;
+}
+
+.tableDiv div {
+    background-color: #ccc;
 }
   
 .asunto textarea {

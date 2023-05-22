@@ -7,14 +7,7 @@ import { Link} from 'react-router-dom';
 import 'react-toastify/dist/ReactToastify.css';
 
 const Formulario = () => {
-  const [form, setForm] = useState({
-    fojasTotales: 0,
-    folioInit: 0,
-    folioFin: 0,
-    asunto: '',
-    // fechaAper: '',
-    // fechaCierre: ''
-  })
+  const [form, setForm] = useState({})
   const navigate = useNavigate();
 
   const handleSubmit = async(e) => {
@@ -47,7 +40,7 @@ const Formulario = () => {
 
   return (
     <form onSubmit={handleSubmit}>
-      <div>
+      <div className='form'>
         <label htmlFor="fojasTotales">Fojas Totales:</label>
         <input
           type="number"
@@ -56,7 +49,7 @@ const Formulario = () => {
         //   required
           min={0}
           max={99}
-          value={form.fojasTotales}
+          value={form?.fojasTotales}
           onChange={(e) => setForm({...form, fojasTotales: e.target.value})}
         />
       </div>
@@ -109,7 +102,7 @@ const Formulario = () => {
           value={form.asunto}
           onChange={(e) => setForm({...form, asunto: e.target.value})}
         />
-        <p>{form.asunto.length}/500</p>
+        <p>{form?.asunto?.length}/500</p>
       </div>
       {/* <div>
         <label htmlFor="fechaAper">Fecha de Apertura:</label>

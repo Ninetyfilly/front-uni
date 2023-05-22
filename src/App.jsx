@@ -3,7 +3,9 @@ import Menu from './views/menu/menu'
 import Estadisticas from './views/estadisticas/estadisticas'
 import Titulos from './views/titulos/titulos'
 import Tramites from './views/tramites/tramites'
-import Formulario from './views/tramites/formulario'
+import FormularioT from './views/tramites/formulario'
+import TablaF from './views/tramites/tabla'
+
 
 
 
@@ -35,8 +37,13 @@ function App() {
     },
     {
       path: "/tramites/formulario",
-      element: <Formulario />,
+      element: <FormularioT />,
     },
+    {
+      path: "/formulario/tablas",
+      element: <TablaF />,
+    },
+    
   ]);
 
   return (
