@@ -7,27 +7,32 @@ import { Link} from 'react-router-dom';
 import 'react-toastify/dist/ReactToastify.css';
 import TextField from '@mui/material/TextField';
 import MenuItem from '@mui/material/MenuItem';
+import { TextareaAutosize } from '@mui/base';
 import './formulario.css'
 
 const Formulario = () => {
   const [form, setForm] = useState({})
   const navigate = useNavigate();
-  const UBICACIONES = [
+  const PANTEONES = [
     {
-      value: 'jalapa',
-      label: 'Jalapa',
+      value: 'central',
+      label: 'Central',
     },
     {
-      value: 'huimanguillo',
-      label: 'Huimanguillo',
+      value: 'atasta',
+      label: 'Atasta',
     },
     {
-      value: 'centro',
-      label: 'Centro',
+      value: 'tamulte',
+      label: 'Tamulte',
     },
     {
-      value: 'jalpa',
-      label: 'Jalpa',
+      value: 'sabina',
+      label: 'Sabina',
+    },
+    {
+      value: 'arbolito',
+      label: 'Arbolito',
     },
   ];
 
@@ -65,17 +70,17 @@ const Formulario = () => {
     <form className='formTitulos' onSubmit={handleSubmit}>
       <div>
         <TextField 
-          id="localizacion"
-          label="localizacion"
+          id="panteon"
+          label="panteon"
           variant="outlined"
           select
           required
           min={0}
           max={99}
           defaultValue="centro"
-          onChange={(e) => setForm({...form, localizacion: e.target.value})}
+          onChange={(e) => setForm({...form, panteon: e.target.value})}
         >
-          {UBICACIONES.map((option) => (
+          {PANTEONES.map((option) => (
             <MenuItem key={option.value} value={option.value}>
               {option.label}
             </MenuItem>
@@ -125,14 +130,10 @@ const Formulario = () => {
         />
       </div>
       <div>
-        <TextField 
-          id="ubicacion"
-          label="Ubicacion"
-          required
-          min={0}
-          max={99}
-          value={form.ubicacion}
+        <TextareaAutosize placeholder='Ubicación' value={form.ubicacion}
           onChange={(e) => setForm({...form, ubicacion: e.target.value})}
+          id="ubicacion"
+          required
         />
       </div>
       <div>

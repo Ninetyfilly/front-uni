@@ -79,19 +79,6 @@ const Formulario = () => {
           onChange={(e) => setForm({...form, folioFin: e.target.value})}
         />
       </div>
-      {/* <div>
-        <label htmlFor="asunto">asunto:</label>
-        <input
-          type="number"
-          id="asunto"
-          name="asunto"
-        //   required
-          min={10}
-          max={99}
-          value={form.asunto}
-          onChange={(e) => setForm({...form, asunto: e.target.value})}
-        />
-      </div> */}
       <div className="asunto">
         <label htmlFor="asunto" >Asunto:</label>
         <textarea
@@ -104,28 +91,6 @@ const Formulario = () => {
         />
         <p>{form?.asunto?.length}/500</p>
       </div>
-      {/* <div>
-        <label htmlFor="fechaAper">Fecha de Apertura:</label>
-        <input
-          type="date"
-          id="fechaAper"
-          name="fechaAper"
-        //   required
-          value={form.fechaAper}
-          onChange={(e) => setForm({...form, fechaAper: e.target.value})}
-        />
-      </div>
-      <div>
-        <label htmlFor="fechaCierre">Fecha de Cierre:</label>
-        <input
-          type="date"
-          id="fechaCierre"
-          name="fechaCierre"
-        //   required
-          value={form.fechaCierre}
-          onChange={(e) => setForm({...form, fechaCierre: e.target.value})}
-        />
-      </div> */}
       <ToastContainer/>
       <button type="submit">Enviar</button>
       <div className="menuForm">
