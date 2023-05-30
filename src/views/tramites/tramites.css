@@ -1,31 +1,17 @@
-.form div {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    margin-top: 10px;
-    margin-bottom: 10px;
-}
   
 label {
     margin-right: 10px;
 }
 
 .tableDiv div {
-    background-color: #ccc;
+    background-color: #000000;
+}
+
+.formTramites div {
+    margin-bottom: 10px;
 }
   
-.asunto textarea {
-    width: 300px;
-    height: 150px;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    resize: vertical;
-    font-size: 16px;
-    line-height: 1.5;
-}
-  
-.asunto p {
+.asuntoText p {
     font-size: 30px;
     color: #888;
     margin-top: 5px;

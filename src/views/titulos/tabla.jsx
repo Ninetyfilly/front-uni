@@ -29,7 +29,7 @@ const TableView = () => {
     }
 
     const columns = [
-        { field: 'localizacion', headerName: 'Localización',type: 'number', width: 200 },
+        { field: 'panteon', headerName: 'panteon',type: 'number', width: 200 },
         { field: 'folio', headerName: 'Folio',type: 'number', width: 200 },
         { field: 'nombreTitu', headerName: 'Nombre del Titular',type: 'number', width: 200 },
         { field: 'nombreBenefi', headerName: 'Nombre del Beneficiario',type: 'number', width: 200 },

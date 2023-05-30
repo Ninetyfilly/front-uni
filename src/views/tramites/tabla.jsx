@@ -48,11 +48,20 @@ const TableView = () => {
     
 
     return (
-        <div className='tableDiv' style={{ height: 400, width: 800 }}>
+        <div className='tableDiv' style={{ height: 400, width: 800,  }}>
             <ToastContainer/>
             <DataGrid
                 rows={data}
                 autoHeight
+                sx={{
+                    boxShadow: 4,
+                    border: 4,
+                    borderColor: 'primary.black',
+                    '& .MuiDataGrid-cell:hover': {
+                      color: 'primary.main',
+                    },
+                    sliderColor: 'black'
+                  }}
                 columns={columns}
                 initialState={{
                     pagination: {
