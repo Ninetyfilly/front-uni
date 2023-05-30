@@ -51,6 +51,15 @@ const TableView = () => {
                 rows={data}
                 autoHeight
                 columns={columns}
+                sx={{
+                    boxShadow: 4,
+                    border: 4,
+                    borderColor: 'primary.black',
+                    '& .MuiDataGrid-cell:hover': {
+                      color: 'primary.main',
+                    },
+                    sliderColor: 'black'
+                  }}
                 initialState={{
                     pagination: {
                     paginationModel: { page: 0, pageSize: 5 },

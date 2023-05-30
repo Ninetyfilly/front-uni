@@ -52,7 +52,24 @@ const Formulario = () => {
         const response = await axios.post(`http://127.0.0.1:8000/titulos`,{
           ...data
         })
-        if(response.data.status == 'ok')console.log('todo bien')
+        if(response.data.status == 'ok'){
+          toast("Datos cargados correctamente.", {
+            autoClose: 2000,
+            position:"top-center",
+            theme: "dark"
+          });
+          setForm({
+            panteon: '',
+            folio: '',
+            nombreTitu: '',
+            nombreBenefi: '',
+            noLote: '',
+            ubicacion: '',
+            libro: '',
+            foja: '',
+            folioTramite: '',
+          })
+        }
         else {
           console.log('response.data.status',response.data.status)
           toast("Usuario o contraseña equivocados.", {
